@@ -2,9 +2,13 @@ from datetime import datetime
 
 from logs.logs import Log
 
-path = "C:\\Users\\1\\Desktop\\git-log"
-url = datetime.now().strftime("%Y-%m-%d")
+# In production it's worth loading data from an *.env file
+path = "Write your folder to save logs"
+file_name = datetime.now().strftime("%Y-%m-%d")
 status = "prode" # all-status-level: prode | error | debug
-log = Log(path, url, status=status)
 
+# init log
+log = Log(path, file_name, status=status)
+
+# use log
 log.print(f"Какая-то информация...{path}")

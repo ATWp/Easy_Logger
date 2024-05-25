@@ -14,8 +14,8 @@ STATUS = {
 class Log():
     """
     Записываем логи
-    @path -> logs_folder, где будут храниться все файлы логов
-    @file_name -> file_name текущий файл дня для хранения логов, которые будут записаны сегодня
+    @path      ->   self.logs_folder: где будут храниться все файлы логов
+    @file_name ->   self.file_name: текущий файл дня для хранения логов, которые будут записаны сегодня
     """
     
     def __init__(self, path, file_name, status="debug", reader = READER):
